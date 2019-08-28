@@ -7,7 +7,6 @@ def position_taken?(board,index)
 end
 
 # Define your WIN_COMBINATIONS constant
-
 WIN_COMBINATIONS = [
   [0,1,2], # Top row
   [3,4,5], # Middle row
@@ -16,7 +15,7 @@ WIN_COMBINATIONS = [
   [1,4,7], # Middle column
   [2,5,8], # Left column
   [0,4,8], # Diagonal 1
-  [2,4,6]  # Diagonal 2
+  [2,4,6], # Diagonal 2
   ]
   
 def won?(board)
@@ -28,7 +27,7 @@ def won?(board)
 end
 
 def full?(board)
-  board.all?{player| player == "X" || player == "O"}
+  board.all?{|character| character == "X" || character == "O"}
 end
 
 def draw?(board)
